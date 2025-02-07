@@ -1,0 +1,25 @@
+# 데이터 및 설정 파일
+data/
+api_keys.json
+anaconda3/
+.cache/
+.bash_history/
+.bash_logout/
+.bashrc/
+.cursor-server/
+.dotnet/
+.ipython/
+.jupyter/
+.local/
+.ssh/
+.myenv/
+*.log
+.conda/
+.vscode/
+.vscode-test/
+.vscode-server/ 
+
+# 작업 폴더 제외
+!CLIP/
+!preprocessing/
+!hj_test/
