@@ -19,6 +19,8 @@ CROPPED_IMAGE_DIR = "/home/cwhjpaper/data/cropped_images"
 PROCESSED_JSON = "/home/cwhjpaper/data/json/processed/copy_image_metadata.json"
 ERROR_LOG_PATH = "/home/cwhjpaper/data/json/processed/select_errors_log_caption_test.json"
 
+
+
 def select_candidate_captions(json_file):
     # json_file에서 image_id를 읽어옴
     with open(json_file, 'r', encoding='utf-8') as f:
@@ -47,12 +49,16 @@ def select_candidate_captions(json_file):
 
     return {"file": json_file, "region_id": None, "status": "success"}
 
+
+
 def find_error_caption(caption, captions_list, counterfactual_list):
     for i, region_captions in enumerate(captions_list):
         for j, original_caption in enumerate(region_captions):
             if original_caption == caption:
                 return counterfactual_list[i][j]
     return "No counterfactual caption found."
+
+
 
 def main():
     openai.api__key = load_gpt_api_key(API_KEYS_PATH)
@@ -79,6 +85,8 @@ def main():
 
         print("Success (•̀ᴗ•́)و ̑̑") # 귀욥다 ,,,, 
         
+
+
 
 if __name__ == "__main__":
     main()
