@@ -11,6 +11,7 @@ from tqdm import tqdm
 import openai
 
 
+
 # 경로 설정
 API_KEYS_PATH = "api_keys.json"
 RAW_JSON_DIR = "/home/cwhjpaper/data/json/raw"
